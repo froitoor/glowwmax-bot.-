@@ -11,7 +11,7 @@ from aiogram.types import (
 )
 
 # 
-BOT_TOKEN = "9268992730:AAGzXCI6GVSsvM0Nu8bGpRjS 40ITLe105kl"
+BOT_TOKEN = "9268992730:AAGzXCI6GVSsvM0Nu8bGpRjS40ITLe105kl"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
