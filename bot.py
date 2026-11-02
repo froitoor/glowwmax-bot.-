@@ -10,8 +10,8 @@ from aiogram.types import (
     Message
 )
 
-# Сюда вместо "9268992730:AAF7FtKQ0a6xakT6m2HvSmxasInS3GQ4Mxc" вставьте ваш токен от BotFather в кавычках!
-BOT_TOKEN = "9268992730:AAF7FtKQ0a6xakT6m2HvSmxasInS3GQ4Mxc"
+# 
+BOT_TOKEN = "9268992730:AAGzXCI6GVSsvM0Nu8bGpRjS 40ITLe105kl"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
