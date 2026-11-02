@@ -125,3 +125,21 @@ async def main():
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     asyncio.run(main())
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+# Запуск крошечного веб-сервера для Render, чтобы он не ругался на порты
+class SimpleHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is alive!")
+
+def run_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(("0.0.0.0", port), SimpleHandler)
+    server.serve_forever()
+
+# Запускаем сервер в фоновом потоке
+threading.Thread(target=run_server, daemon=True).start()
